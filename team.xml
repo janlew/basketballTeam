@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<druzyna>
+    <nazwa kod="LAL">Los Angeles Lakers</nazwa>
+    <konferencja>Wschodnia</konferencja>
+
+    <pozycje>
+        <pozycja pos_id="SG">Shooting Guard</pozycja>
+        <pozycja pos_id="PG">Point Guard</pozycja>
+        <pozycja pos_id="C">Center</pozycja>
+        <pozycja pos_id="PF">Power Forward</pozycja>
+        <pozycja pos_id="SF">Small Forward</pozycja> 
+    </pozycje>
+    
+    <zawodnicy>
+        <zawodnik>
+            <imie>Kobe</imie>
+            <nazwisko>Bryant</nazwisko>
+            <pozycja refid="SG"></pozycja>
+            <wzrost jednostka="cm">198</wzrost>
+            <numer>8</numer>
+            <pochodzenie kod="USA">Stany Zjednoczone</pochodzenie> 
+        </zawodnik>
+
+        <zawodnik>
+            <imie>Derek</imie>
+            <nazwisko>Fisher</nazwisko>
+            <pozycja refid="PG"></pozycja>
+            <wzrost jednostka="cm">185</wzrost>
+            <numer>2</numer>
+            <pochodzenie kod="USA">Stany Zjednoczone</pochodzenie>
+        </zawodnik>
+
+        <zawodnik>
+            <imie>Greg</imie>
+            <nazwisko>Foster</nazwisko>
+            <pozycja refid="C"></pozycja>
+            <wzrost jednostka="cm">211</wzrost>
+            <numer>40</numer>
+            <pochodzenie kod="USA">Stany Zjednoczone</pochodzenie>
+        </zawodnik>
+
+        <zawodnik>
+            <imie>George</imie>
+            <nazwisko>Devean</nazwisko>
+            <pozycja refid="SG"></pozycja>
+            <wzrost jednostka="cm">203</wzrost>
+            <numer>3</numer>
+            <pochodzenie kod="USA">Stany Zjednoczone</pochodzenie>
+        </zawodnik>
+
+        <zawodnik>
+            <imie>Ron</imie>
+            <nazwisko>Harper</nazwisko>
+            <pozycja refid="SG"></pozycja>
+            <wzrost jednostka="cm">198</wzrost>
+            <numer>4</numer>
+            <pochodzenie kod="USA">Stany Zjednoczone</pochodzenie>
+        </zawodnik>
+
+        <zawodnik>
+            <imie>Robert</imie>
+            <nazwisko>Horry</nazwisko>
+            <pozycja refid="PF"></pozycja>
+            <wzrost jednostka="cm">208</wzrost>
+            <numer>5</numer>
+            <pochodzenie kod="USA">Stany Zjednoczone</pochodzenie>
+        </zawodnik>
+
+        <zawodnik>
+            <imie>Tyronn</imie>
+            <nazwisko>Lue</nazwisko>
+            <pozycja refid="PG"></pozycja>
+            <wzrost jednostka="cm">183</wzrost>
+            <numer>10</numer>
+            <pochodzenie kod="USA">Stany Zjednoczone</pochodzenie>
+        </zawodnik>
+
+        <zawodnik>
+            <imie>Shaquille</imie>
+            <nazwisko>O'Neal</nazwisko>
+            <pozycja refid="C"></pozycja>
+            <wzrost jednostka="cm">216</wzrost>
+            <numer>34</numer>
+            <pochodzenie kod="USA">Stany Zjednoczone</pochodzenie>
+        </zawodnik>
+
+        <zawodnik>
+            <imie>Horace</imie>
+            <nazwisko>Grant</nazwisko>
+            <pozycja refid="PF"></pozycja>
+            <wzrost jednostka="cm">208</wzrost>
+            <numer>54</numer>
+            <pochodzenie kod="USA">Stany Zjednoczone</pochodzenie>
+        </zawodnik>
+
+        <zawodnik>
+            <imie>Rick</imie>
+            <nazwisko>Fox</nazwisko>
+            <pozycja refid="SF"></pozycja>
+            <wzrost jednostka="cm">201</wzrost>
+            <numer>17</numer>
+            <pochodzenie kod="CA">Kanada</pochodzenie>
+        </zawodnik>
+
+    </zawodnicy>
+
+    <trener>
+        <imie>Phil</imie>
+        <nazwisko>Jackson</nazwisko>
+    </trener>
+
+    <wlasciciel>
+        <imie>Jerry</imie>
+        <nazwisko>Buss</nazwisko>
+    </wlasciciel>
+
+    <stadion>
+        <nazwa>Staples Center</nazwa>
+        <pojemnosc jednostka="miejsc">19000</pojemnosc>
+    </stadion>
+</druzyna>
+
