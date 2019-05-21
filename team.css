@@ -1,0 +1,186 @@
+nazwa:before {
+    content: 'Nazwa drużyny: ';
+    white-space: pre;
+    font-weight: bold;
+    color: black;
+    font-size: 100%;
+}
+
+nazwa {
+    white-space: pre;
+    font-weight: bold;
+    color: blueviolet;
+    font-size: 140%;
+}
+
+konferencja:before {
+    content: '\A Konferencja: ';
+    color: black;
+    white-space: pre;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+konferencja {
+    white-space: pre;
+    font-weight: bold;
+    color: blueviolet;
+    font-size: 140%;
+}
+
+pozycje:before {
+    display: table;
+    content: '\A Pozycje: ';
+    color: black;
+    white-space: pre;
+    font-weight: bold;
+    font-size: 100%;
+}
+pozycja {
+    color: rgb(95, 87, 15);
+    display: block;
+}
+pozycja::after {
+
+    content: '\00a0' attr(pos_id);
+    color: black;
+}
+
+zawodnicy::before {
+    content: '\A Zawodnicy: ';
+    font-weight: bold;
+    color: black;
+    font-size: 140%;
+    white-space: pre;
+}
+
+zawodnicy {
+    display: block;
+}
+
+zawodnik {
+    margin: auto;
+    display: block;
+    border-top: 1px solid black;
+}
+zawodnik imie:before {
+    content: '\A imie: ';
+    color: black;
+    font-weight: bold;
+}
+zawodnik imie {
+    color: blueviolet;
+    font-size: 120%;
+    display: block;
+}
+zawodnik nazwisko:before {
+    content: '\A nazwisko: ';
+    color: black;
+    font-weight: bold;
+}
+zawodnik nazwisko {
+    color: blueviolet;
+    display: block;
+    font-size: 120%;
+}
+zawodnik wzrost:before {
+    content: '\A wzrost: ';
+    color: black;
+    font-weight: bold;
+}
+zawodnik wzrost {
+    color: blueviolet;
+    display: block;
+    font-size: 120%;
+}
+zawodnik wzrost::after {
+    content: attr(jednostka);
+}
+zawodnik numer:before {
+    content: 'numer: ';
+    color: black;
+    font-weight: bold;
+}
+zawodnik numer {
+    color: blueviolet;
+    display: block;
+    font-size: 120%;
+}
+zawodnik pochodzenie:before {
+    content: 'kraj pochodzenia: ';
+    color: black;
+    font-weight: bold;
+}
+zawodnik pochodzenie {
+    color: blueviolet;
+    display: block;
+    font-size: 120%;
+}
+zawodnik pochodzenie::after {
+    line-break: auto;
+}
+zawodnik pozycja_zawodnika::before {
+    content: 'Pozycja zawodnika: ';
+    color: black;
+    font-weight: bold;
+    font-size: 120%;
+}
+zawodnik pozycja_zawodnika::after {
+    content: attr(refid);
+    color: blueviolet;
+    font-size: 120%;
+}
+
+trener:before {
+    content: '\A Trener: ';
+    color: black;
+    white-space: pre;
+    font-weight: bold;
+    font-size: 120%;
+}
+trener {
+    display: block;
+    content: '\A';
+    color: blueviolet;
+    font-size: 120%;
+}
+
+wlasciciel:before {
+    content: '\A Właściciel: ';
+    color: black;
+    white-space: pre;
+    font-weight: bold;
+}
+wlasciciel {
+    display: block;
+    color: blueviolet;
+    font-size: 120%;
+}
+
+stadion::before {
+    display: block;
+    content: '\A Stadion: ';
+    color: black;
+    white-space: pre;
+    font-weight: bold;
+}
+stadion {
+    display: block;
+    color: blueviolet;
+    font-size: 120%;
+}
+stadion pojemnosc::before {
+    display: block;
+    content: 'Pojemnosc stadionu: ';
+    color: black;
+    white-space: pre;
+    font-weight: bold;
+    font-size: 100%;
+}
+stadion pojemnosc {
+    color: black;
+}
+stadion pojemnosc::after {
+    content: '\00a0' attr(jednostka);
+    color: black;
+}
