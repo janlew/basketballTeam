@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:attribute name="pos_id">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[A-Z]{2}"></xs:pattern>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="kod">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[A-Z]+"></xs:pattern>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="jednostka">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:simpleType name="nazwa_type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][a-z]+(\s[A-Z][a-z]+)?(\s[A-Z][a-z]+)?"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="konferencja_type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][a-z]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="imie_type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][a-z]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="nazwisko_type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z]('?)[A-Z]?[a-z]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="nazwaS_type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][a-z]+\s[A-Z][a-z]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="numer_type">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:pattern value="[0-9]+"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="pozycja_type">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="pos_id" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="pochodzenie_type">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="kod" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="pojemnosc_type">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="jednostka" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="wzrost_type">
+        <xs:simpleContent>
+            <xs:extension base="xs:positiveInteger">
+                <xs:attribute name="jednostka" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="pozycja_zawodnika_type">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="refid" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="wlasciciel_type">
+        <xs:sequence>
+            <xs:element name="imie" type="imie_type"></xs:element>
+            <xs:element name="nazwisko" type="nazwisko_type"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="trener_type">
+        <xs:sequence>
+            <xs:element name="imie" type="imie_type"></xs:element>
+            <xs:element name="nazwisko" type="nazwisko_type"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="stadion_type">
+        <xs:sequence>
+            <xs:element name="nazwaS" type="nazwaS_type"></xs:element>
+            <xs:element name="pojemnosc" type="pojemnosc_type"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="pozycje_type">
+        <xs:sequence>
+            <xs:element name="pozycja" type="pozycja_type" maxOccurs="5"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="zawodnik_type">
+        <xs:sequence>
+            <xs:element name="imie" type="imie_type"></xs:element>
+            <xs:element name="nazwisko" type="nazwisko_type"></xs:element>
+            <xs:element name="pozycja_zawodnika" type="pozycja_zawodnika_type"></xs:element>
+            <xs:element name="wzrost" type="wzrost_type"></xs:element>
+            <xs:element name="numer" type="numer_type"></xs:element>
+            <xs:element name="pochodzenie" type="pochodzenie_type"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="zawodnicy_type">
+        <xs:sequence>
+            <xs:element name="zawodnik" type="zawodnik_type" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="druzyna_type">
+        <xs:sequence>
+            <xs:element name="nazwa" type="nazwa_type"></xs:element>
+            <xs:element name="konferencja" type="konferencja_type"></xs:element>
+            <xs:element name="wlasciciel" type="wlasciciel_type"></xs:element>
+            <xs:element name="trener" type="trener_type"></xs:element>
+            <xs:element name="stadion" type="stadion_type"></xs:element>
+            <xs:element name="pozycje" type="pozycje_type"></xs:element>
+            <xs:element name="zawodnicy" type="zawodnicy_type"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="druzyna" type="druzyna_type">
+        <xs:key name="posKey">
+            <xs:selector xpath=".//pozycje/pozycja"/>
+            <xs:field xpath="@pos_id"/>
+        </xs:key>
+        <xs:keyref name="posKeyRef" refer="posKey">
+            <xs:selector xpath=".//zawodnicy/zawodnik/pozycja_zawodnika"/>
+            <xs:field xpath="@refid"/>
+        </xs:keyref>
+    </xs:element>
+
+</xs:schema>
