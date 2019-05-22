@@ -1,0 +1,29 @@
+<!ATTLIST pojemnosc jednostka CDATA #REQUIRED>
+<!ATTLIST pozycja pos_id ID #REQUIRED>
+<!ATTLIST pozycja_zawodnika refid IDREF #REQUIRED>
+<!ATTLIST wzrost jednostka CDATA #REQUIRED>
+<!ATTLIST pochodzenie kod CDATA #REQUIRED>
+
+<!ELEMENT nazwa (#PCDATA)>
+<!ELEMENT konferencja (#PCDATA)>
+
+<!ELEMENT imie (#PCDATA)>
+<!ELEMENT nazwisko (#PCDATA)>
+<!ELEMENT wlasciciel (imie, nazwisko)>
+<!ELEMENT trener (imie, nazwisko)>
+
+<!ELEMENT nazwaS (#PCDATA)>
+<!ELEMENT pojemnosc (#PCDATA)>
+<!ELEMENT stadion (nazwaS, pojemnosc)>
+
+<!ELEMENT pozycja (#PCDATA)>
+<!ELEMENT pozycje (pozycja+)>
+
+<!ELEMENT pozycja_zawodnika (#PCDATA)>
+<!ELEMENT wzrost (#PCDATA)>
+<!ELEMENT numer (#PCDATA)>
+<!ELEMENT pochodzenie (#PCDATA)>
+<!ELEMENT zawodnik (imie, nazwisko, pozycja_zawodnika, wzrost, numer, pochodzenie)>
+<!ELEMENT zawodnicy (zawodnik+)>
+
+<!ELEMENT druzyna (nazwa, konferencja, wlasciciel, trener, stadion, pozycje, zawodnicy)>

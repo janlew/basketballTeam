@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/css" href="team.css" ?>
+<!DOCTYPE druzyna SYSTEM "team.dtd">
 <druzyna>
     <nazwa>Los Angeles Lakers</nazwa>
     <konferencja>Wschodnia</konferencja>
@@ -117,6 +118,6 @@
             <numer>17</numer>
             <pochodzenie kod="CA">Kanada</pochodzenie>
         </zawodnik>
-
     </zawodnicy>
+
 </druzyna>
