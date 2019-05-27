@@ -21,11 +21,21 @@
     </stadion>
 
     <pozycje>
-        <pozycja pos_id="SG">Shooting Guard</pozycja>
-        <pozycja pos_id="PG">Point Guard</pozycja>
-        <pozycja pos_id="C">Center</pozycja>
-        <pozycja pos_id="PF">Power Forward</pozycja>
-        <pozycja pos_id="SF">Small Forward</pozycja> 
+        <pozycja pos_id="SG">
+            <nazwaP>Shooting Guard</nazwaP>
+        </pozycja>
+        <pozycja pos_id="PG">
+            <nazwaP>Point Guard</nazwaP>
+        </pozycja>
+        <pozycja pos_id="C">
+            <nazwaP>Center</nazwaP>
+        </pozycja>
+        <pozycja pos_id="PF">
+            <nazwaP>Power Forward</nazwaP>
+        </pozycja>
+        <pozycja pos_id="SF">
+            <nazwaP>Small Forward</nazwaP>
+        </pozycja> 
     </pozycje>
     
     <zawodnicy>

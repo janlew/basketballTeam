@@ -16,7 +16,8 @@
 <!ELEMENT pojemnosc (#PCDATA)>
 <!ELEMENT stadion (nazwaS, pojemnosc)>
 
-<!ELEMENT pozycja (#PCDATA)>
+<!ELEMENT nazwaP (#PCDATA)>
+<!ELEMENT pozycja (nazwaP)>
 <!ELEMENT pozycje (pozycja+)>
 
 <!ELEMENT pozycja_zawodnika (#PCDATA)>
